@@ -39,8 +39,8 @@ a {
 }
 
 :where(a, button, input, textarea):focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 4px;
+  outline: 3px solid var(--accent); 
+  outline-offset: 2px;
 }
 
 button,
@@ -86,11 +86,18 @@ textarea {
 }
 .hero-image img {
   width: 100%;
-  max-width: 400px;
-  height: 480px;
+  max-width: 450px; 
+  height: auto;   
+  aspect-ratio: 4 / 5; 
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid rgba(247, 244, 239, 0.2);
+  transition: transform 0.3s ease;
+}
+
+
+.hero-image:hover img {
+  transform: scale(1.02);
 }
 
 .site-header {
@@ -173,18 +180,18 @@ textarea {
   font-size: 0.76rem;
   font-weight: 700;
   line-height: 1;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.15em;
+  opacity: 0.9;
   text-transform: uppercase;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem); 
+  font-size: clamp(2.8rem, 6vw, 5.2rem); 
   font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.02em; /* Tighter heading tracking */
-  margin: 0;
+  letter-spacing: -0.04em; 
+  margin: 0 0 0.5em 0; 
 }
-
 .hero-copy {
   max-width: 660px;
   margin: clamp(24px, 3vw, 34px) 0 0;
@@ -400,11 +407,11 @@ h1 {
 
 .project-card:hover,
 .project-card:focus-within {
-  transform: translateY(-4px); /* Tighter hover state */
-  background: rgba(247, 244, 239, 0.09);
-  border-color: rgba(247, 244, 239, 0.28);
+  transform: translateY(-8px) scale(1.01); /* Added slight scale */
+  background: rgba(247, 244, 239, 0.12); /* Slightly brighter background */
+  border-color: rgba(247, 244, 239, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Adds depth */
 }
-
 .project-card-featured {
   grid-column: span 2;
   grid-template-columns: minmax(0, 1.16fr) minmax(340px, 0.84fr);
