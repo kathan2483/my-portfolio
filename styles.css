@@ -396,7 +396,8 @@ h1 {
 }
 
 .project-card {
-  display: grid;
+  display: flex; /* Changed from grid to flex for better control */
+  flex-direction: column;
   min-height: 100%;
   overflow: hidden;
   background: rgba(247, 244, 239, 0.06);
@@ -405,31 +406,23 @@ h1 {
   transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
 }
 
-.project-card:hover,
-.project-card:focus-within {
-  transform: translateY(-8px) scale(1.01); /* Added slight scale */
-  background: rgba(247, 244, 239, 0.12); /* Slightly brighter background */
-  border-color: rgba(247, 244, 239, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Adds depth */
-}
-.project-card-featured {
-  grid-column: span 2;
-  grid-template-columns: minmax(0, 1.16fr) minmax(340px, 0.84fr);
-}
-
 .project-visual {
   position: relative;
-  display: grid;
-  min-height: 320px; /* Professional, balanced height */
-  place-items: center;
+  width: 100%;
+  height: 280px; /* Set a fixed height for consistency */
   overflow: hidden;
-  background:
-    linear-gradient(rgba(247, 244, 239, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(247, 244, 239, 0.08) 1px, transparent 1px),
-    linear-gradient(135deg, rgba(168, 79, 53, 0.36), rgba(247, 244, 239, 0.07));
-  background-size: 44px 44px, 44px 44px, auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #151413;
 }
 
+.project-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the 280px space perfectly */
+  object-position: center;
+}
 .project-visual::after {
   position: absolute;
   inset: 28px;
