@@ -420,7 +420,10 @@ h1 {
 .project-visual {
   position: relative;
   display: grid;
-  min-height: 430px;
+  /* CHANGE THIS: Reduce from 430px to 300px or 320px */
+  min-height: 300px; 
+  /* ADD THIS: This keeps the image box proportional */
+  aspect-ratio: 16 / 9; 
   place-items: center;
   overflow: hidden;
   background:
