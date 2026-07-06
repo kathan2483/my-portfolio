@@ -58,8 +58,25 @@
         </div>
     
         <div class="hero-image">
-          <img src="my.jpeg" alt="Kathan Patel" />
-        </div>
+  <div class="code-window">
+    <div class="code-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </div>
+    <div class="code-body">
+<pre><code><span class="comment">// Built to convert. Engineered to perform.</span>
+<span class="keyword">const</span> developer = {
+  <span class="property">name</span>: <span class="string">'Kathan'</span>,
+  <span class="property">focus</span>: [<span class="string">'Conversion Design'</span>, <span class="string">'Performance'</span>],
+  <span class="property">stack</span>: [<span class="string">'React'</span>, <span class="string">'WordPress'</span>, <span class="string">'Supabase'</span>],
+  <span class="property">execute</span>: () => {
+    <span class="keyword">return</span> <span class="string">'Real Impact'</span>;
+  }
+};</code></pre>
+    </div>
+  </div>
+</div>
     
       </section>
 
@@ -148,14 +165,41 @@
               </div>
             </article>
 
-            <article class="project-card project-card-empty" aria-label="Project 2 reserved space">
-              <div class="project-visual project-visual-empty">
-                <span>Local Retail</span>
+            <article class="project-card">
+              <div class="project-visual">
+                <img src="OpsPulse.png" alt="Screenshot of OpsPulse Dashboard" style="width: 100%; height: 100%; object-fit: cover; display: block;">
               </div>
               <div class="project-content">
-                <p class="project-type">Small Business eCommerce</p>
-                <h3>Prairie Goods</h3>
-                <p>A fast, accessible online storefront built with robust data structuring and streamlined checkout flows to maximize sales.</p>
+                <div>
+                  <p class="project-type">Full-Stack SaaS App</p>
+                  <h3>OpsPulse</h3>
+                  <p>
+                    A comprehensive inventory management system featuring real-time data visualization, 
+                    authentication, and performance-optimized queries to help small businesses track stock levels efficiently.
+                  </p>
+                </div>
+            
+                <ul class="tech-stack" aria-label="Technology stack">
+                  <li>React</li>
+                  <li>Supabase</li>
+                  <li>Recharts</li>
+                  <li>Tailwind CSS</li>
+                </ul>
+            
+                <div class="project-actions">
+                  <a class="project-button project-button-primary" 
+                     href="https://opspulsee.netlify.app/" 
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                     Live Demo
+                  </a>
+                  <a class="project-button" 
+                     href="https://github.com/kathan2483" 
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                     Source Code
+                  </a>
+                </div>
               </div>
             </article>
 
@@ -311,24 +355,27 @@
             </div>
           </div>
 
-          <form class="contact-form" action="mailto:" method="post" enctype="text/plain" aria-label="Contact form">
-            <div class="form-row">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required />
-            </div>
+         <form class="contact-form" name="contact" method="POST" data-netlify="true" aria-label="Contact form">
+ 
+  <input type="hidden" name="form-name" value="contact" />
+            
+  <div class="form-row">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" autocomplete="name" required />
+  </div>
 
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
-            </div>
+  <div class="form-row">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" autocomplete="email" required />
+  </div>
 
-            <div class="form-row">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
-            </div>
+  <div class="form-row">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+  </div>
 
-            <button class="form-submit" type="submit">Send Message</button>
-          </form>
+  <button class="form-submit" type="submit">Send Message</button>
+</form>
         </div>
       </section>
     </main>
